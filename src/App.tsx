@@ -1,8 +1,5 @@
-import React, { useEffect } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
-import MainContainer from "./components/MainContainer";
 import {
   BrowserRouter as Router,
   Navigate,
@@ -11,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import Favorites from "./components/Favorites";
+import Main from "./components/Main";
 
 function App() {
   return (
@@ -18,8 +16,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<MainContainer />} />
-          <Route path="/events/search" element={<MainContainer />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/events/search" element={<Main />} />
           {/* <Route path="/gifs/:id/details" element={<Details />} /> */}
           {/* <Route path="/gifs/favorites" element={<Favorites />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
