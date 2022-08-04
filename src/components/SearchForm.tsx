@@ -10,9 +10,12 @@ const SearchForm = () => {
 
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
-    navigate(`/events/search?${new URLSearchParams({ q: city })}`);
-    navigate(`/events/search?${new URLSearchParams({ q: state })}`);
-    navigate(`/events/search?${new URLSearchParams({ q: date })}`);
+    const searchParams: any = {
+      ...(city ? { city } : {}),
+      ...(state ? { state } : {}),
+      ...(date ? { date } : {}),
+    };
+    navigate(`/events/search?${new URLSearchParams(searchParams)}`);
   };
 
   return (
