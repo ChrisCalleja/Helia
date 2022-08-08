@@ -10,9 +10,9 @@ const Details = () => {
 
   useEffect(() => {
     getEventById(id!).then((response) => {
+      console.log(response);
       setEvent(response);
     });
-    console.log(event);
   }, []);
 
   return <div className="Details"></div>;

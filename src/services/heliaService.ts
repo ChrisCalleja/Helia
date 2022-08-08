@@ -20,9 +20,9 @@ export const getEventById = (id: string): Promise<Event> => {
     .get(
       `https://app.ticketmaster.com/discovery/v2/events/${encodeURIComponent(
         id
-      )}`,
+      )}.json`,
       {
-        params: { api_key: key },
+        params: { apikey: key },
       }
     )
     .then((response) => {
