@@ -20,31 +20,37 @@ const SearchForm = () => {
 
   return (
     <form className="SearchForm" onSubmit={(e) => handleSubmit(e)}>
-      <label htmlFor="city">City</label>
+      <label htmlFor="city"></label>
       <input
+        className="input-styles"
         type="text"
         name="city"
         id="city"
         value={city}
         onChange={(e) => setCity(e.target.value)}
+        placeholder="City"
       />
-      <label htmlFor="state">State</label>
+      <label htmlFor="state"></label>
       <input
+        className="input-styles"
         type="text"
         name="state"
         id="state"
         value={state}
         onChange={(e) => setState(e.target.value)}
+        placeholder="State"
       />
-      <label htmlFor="date">Date</label>
+      <label htmlFor="date"></label>
       <input
+        className="input-styles"
         type="text"
         name="date"
         id="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
+        placeholder="Date"
       />
-      <button>Search</button>
+      <button className="input-styles btn">Search</button>
     </form>
   );
 };

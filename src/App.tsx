@@ -9,6 +9,7 @@ import {
 
 import Favorites from "./components/Favorites";
 import Main from "./components/Main";
+import Details from "./components/Details";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/events/search" element={<Main />} />
-          {/* <Route path="/gifs/:id/details" element={<Details />} /> */}
+          <Route path="/events/details/:id" element={<Details />} />
           {/* <Route path="/gifs/favorites" element={<Favorites />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

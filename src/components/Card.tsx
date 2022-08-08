@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Event from "../models/Event";
 import "./Card.css";
 
@@ -12,6 +13,13 @@ const Card = ({ event }: Props) => {
       <p>{event.dates.start.localDate}</p>
       <p>{event.dates.start.localTime}</p>
       <p>{event._embedded.venues[0].city.name}</p>
+      <Link to={`/events/details/${encodeURIComponent(event.id)}`}>
+        <img src={event.images[2].url} alt={event.name} id="image" />
+      </Link>
+
+      <Link to={`/events/details/${encodeURIComponent(event.id)}`}>
+        <button className="btn">Details</button>
+      </Link>
     </div>
   );
 };

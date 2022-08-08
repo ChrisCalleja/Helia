@@ -1,4 +1,6 @@
 import axios from "axios";
+import Event from "../models/Event";
+import SingleEventResponse from "../models/SingleEventResponse";
 
 const key: string = process.env.REACT_APP_API_KEY || "";
 
@@ -8,6 +10,21 @@ export const getEventsByParams = (searchParams: any): Promise<any> => {
     .get("https://app.ticketmaster.com/discovery/v2/events.json", {
       params: searchParams,
     })
+    .then((response) => {
+      return response.data;
+    });
+};
+
+export const getEventById = (id: string): Promise<Event> => {
+  return axios
+    .get(
+      `https://app.ticketmaster.com/discovery/v2/events/${encodeURIComponent(
+        id
+      )}`,
+      {
+        params: { api_key: key },
+      }
+    )
     .then((response) => {
       return response.data;
     });

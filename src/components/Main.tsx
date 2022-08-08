@@ -33,7 +33,10 @@ const Main = () => {
 
   return (
     <div className="Main">
-      <SearchForm />
+      <div className="FormInputs">
+        <SearchForm />
+      </div>
+
       <EventContainer events={events} />
     </div>
   );

@@ -26,9 +26,14 @@ interface _embedded {
   venues: Venue[];
 }
 
+interface Image {
+  url: string;
+}
+
 export default interface Event {
   name: string;
   id: string;
   _embedded: _embedded;
   dates: Date;
+  images: Image[];
 }
