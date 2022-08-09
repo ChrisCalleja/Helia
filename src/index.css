@@ -28,20 +28,3 @@ body {
 a {
   text-decoration: none;
 }
-
-@media only screen and (min-width: 768px) {
-  .SearchForm {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .EventContainer ul {
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .EventContainer .Card {
-    width: 25%;
-  }
-}

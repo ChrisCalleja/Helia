@@ -6,3 +6,10 @@
 h2 {
   font-family: "Rajdhani", sans-serif;
 }
+
+@media only screen and (min-width: 768px) {
+  .Main ul {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -15,3 +15,13 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media only screen and (min-width: 768px) {
+  .EventContainer ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .EventContainer .Card {
+    width: 25%;
+  }
+}

@@ -41,3 +41,11 @@
 .Card p {
   font-size: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+  .EventContainer .Card {
+    margin: 30px;
+    min-height: 460px;
+    align-content: flex-end;
+  }
+}
