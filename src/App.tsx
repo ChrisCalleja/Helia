@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/events/search" element={<Main />} />
           <Route path="/events/details/:id" element={<Details />} />
-          {/* <Route path="/gifs/favorites" element={<Favorites />} /> */}
+          <Route path="/events/favorites" element={<Favorites />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

@@ -21,7 +21,7 @@ const Card = ({ event }: Props) => {
       <p>{event._embedded.venues[0].city.name}</p>
 
       <Link to={`/events/details/${encodeURIComponent(event.id)}`}>
-        <button className="btn">Details</button>
+        <button className="input-styles btn">Portal</button>
       </Link>
       {isFav(event.id) ? (
         <i

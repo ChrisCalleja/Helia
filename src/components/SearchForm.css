@@ -1,6 +1,4 @@
-.input-styles {
-    /* background-color: rgba(225, 226, 238, .5);
-    color: black */
-    border-radius: 5px;
-    padding: 4px;
+.SearchForm {
+  width: 75%;
+  display: flex;
 }
