@@ -1,4 +1,31 @@
 .SearchForm {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.75px solid rgba(109, 113, 181, 0.75);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 30px;
   width: 75%;
+  position: relative;
   display: flex;
+}
+
+.SearchForm .input-styles {
+  border-radius: 5px;
+  margin: 3px;
+  padding: 3px;
+  background-color: rgba(225, 226, 238, 0.65);
+}
+
+.SearchForm .buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.SearchForm input::placeholder {
+  color: black;
+}
+
+.SearchForm input {
+  box-shadow: inset 0;
+
 }

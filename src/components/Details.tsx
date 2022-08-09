@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Event from "../models/Event";
 import { getEventById } from "../services/heliaService";
+import Card from "./Card";
 import "./Details.css";
 
 const Details = () => {
@@ -15,7 +16,11 @@ const Details = () => {
     });
   }, []);
 
-  return <div className="Details"></div>;
+  return (
+    <div className="Details">
+      {event ? <Card event={event} /> : <p>Prepare for lift off...</p>}
+    </div>
+  );
 };
 
 export default Details;

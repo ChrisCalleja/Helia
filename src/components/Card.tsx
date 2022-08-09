@@ -16,24 +16,27 @@ const Card = ({ event }: Props) => {
         <img src={event.images[2].url} alt={event.name} id="image" />
       </Link>
       <h2>{event.name}</h2>
-      <p>{event.dates.start.localDate}</p>
-      <p>{event.dates.start.localTime}</p>
-      <p>{event._embedded.venues[0].city.name}</p>
-
-      <Link to={`/events/details/${encodeURIComponent(event.id)}`}>
-        <button className="input-styles btn">Portal</button>
-      </Link>
-      {isFav(event.id) ? (
-        <i
-          className="fa-solid fa-hand-spock"
-          onClick={() => removeFavorite(event.id)}
-        ></i>
-      ) : (
-        <i
-          className="fa-regular fa-hand-spock"
-          onClick={() => addFavorite(event)}
-        ></i>
-      )}
+      <div className="EventInfo">
+        <p>{event.dates.start.localDate}</p>
+        <p>{event.dates.start.localTime}</p>
+        <p>{event._embedded.venues[0].city.name}</p>
+      </div>
+      <div className="PortalFavorite">
+        <Link to={`/events/details/${encodeURIComponent(event.id)}`}>
+          <button className="btn">Portal</button>
+        </Link>
+        {isFav(event.id) ? (
+          <i
+            className="fa-solid fa-hand-spock"
+            onClick={() => removeFavorite(event.id)}
+          ></i>
+        ) : (
+          <i
+            className="fa-regular fa-hand-spock"
+            onClick={() => addFavorite(event)}
+          ></i>
+        )}
+      </div>
     </div>
   );
 };

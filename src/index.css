@@ -11,16 +11,37 @@ body {
   background-image: url(../src/assets/galaxy.png);
   background-size: cover;
   background-repeat: no-repeat;
-
   background-position: center;
   background-attachment: fixed;
 }
 
 .btn {
   background-color: rgba(109, 113, 181);
-  border-radius: 5px;
-  padding: 4px;
+  border-radius: 10px;
+  padding: 7px;
   display: flex;
   flex-direction: column;
   color: black;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .SearchForm {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .EventContainer ul {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .EventContainer .Card {
+    width: 25%;
+  }
 }

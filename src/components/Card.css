@@ -17,10 +17,27 @@
   background-color: rgba(225, 226, 238, 0.5);
 }
 
-#image {
-  height: 50%;
-  width: 50%;
-  /* position: absolute; */
-  /* padding-bottom: 5px; */
+.Card #image {
+  height: auto;
+  width: 100%;
+
   border-radius: 10px;
+}
+
+.Card i {
+  font-size: 30px;
+}
+
+.Card .PortalFavorite {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card .EventInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card p {
+  font-size: 20px;
 }
