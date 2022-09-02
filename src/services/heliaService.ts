@@ -15,7 +15,7 @@ export const getEventsByParams = (searchParams: any): Promise<any> => {
     });
 };
 
-export const getEventById = (id: string): Promise<Event> => {
+const getEventById = (id: string): Promise<Event> => {
   return axios
     .get(
       `https://app.ticketmaster.com/discovery/v2/events/${encodeURIComponent(
